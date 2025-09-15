@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="form-container">
+    <h2>Edit Profile</h2>
+    <form method="POST">
+        <input type="text" name="name" value="{{ user['name'] }}" placeholder="Name"><br>
+        <input type="password" name="password" placeholder="New Password"><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</div>
+</body>
+</html>

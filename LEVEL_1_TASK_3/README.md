@@ -48,3 +48,9 @@ To build an interactive temperature converter that provides real-time conversion
    git clone https://github.com/your-username/OIBSIP_Web_Development_Task3.git
 2.Open the index.html file in any web browser.
 
+Internship Info:
+Organization: Oasis Infobyte
+Domain: Web Development and Designing
+Task: Temperature Converter
+Internship ID: OIBSIP
+

@@ -49,7 +49,7 @@ To design and develop a responsive personal portfolio website with multiple sect
 ## How to Run
 1. Clone this repository.  
    ```bash
-   git clone https://github.com/your-username/OIBSIP_Web_Development_Task2.git
+   git clone https://github.com/tejubongale/OIBSIP_Web_Development_Task2.git
 2.Open the index2.html file in any web browser.
 
 Internship Info
@@ -57,4 +57,5 @@ Organization: Oasis Infobyte
 Domain: Web Development and Designing
 Task: Portfolio Website
 Internship ID: OIBSIP
+
 

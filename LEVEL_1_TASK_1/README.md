@@ -22,7 +22,6 @@ To design and develop a responsive landing page for an AI-powered chatbot applic
 2. Open the respective task folder (e.g., Task1).  
 3. Open `index.html` in any web browser to view the project.  
 
-
 ## Outcome
 - Developed a fully responsive and visually appealing landing page.  
 - Showcased chatbot features with clean design and layout.  
@@ -32,3 +31,4 @@ To design and develop a responsive landing page for an AI-powered chatbot applic
 Organization: Oasis Infobyte  
 Domain: Web Development and Designing  
 Internship ID: OIBSIP  
+

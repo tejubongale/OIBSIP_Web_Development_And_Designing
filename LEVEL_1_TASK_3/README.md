@@ -46,3 +46,5 @@ To build an interactive temperature converter that provides real-time conversion
 1. Clone this repository.  
    ```bash
    git clone https://github.com/your-username/OIBSIP_Web_Development_Task3.git
+2.Open the index.html file in any web browser.
+

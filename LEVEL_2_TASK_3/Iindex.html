@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanchit – Pro To-Do with Reminders</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark">📌</span>
+        <h1>My To-Do App</h1>
+      </div>
+      <div class="owner">
+        <img id="profilePic" src="https://via.placeholder.com/40" alt="Profile" />
+        <span id="profileName">Sanchit</span>
+        <button id="editProfile" class="icon-btn gray" title="Edit Profile">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Add Task -->
+    <section class="add-task">
+      <div class="input-row">
+        <input id="taskText" class="text" type="text" placeholder="What do you need to do?" maxlength="140" />
+        <input id="taskTime" class="when" type="datetime-local" />
+        <button id="addBtn" class="btn primary"><i class="fa-solid fa-plus"></i> Add Task</button>
+      </div>
+      <p class="hint">
+        Tip: pick a date & time to get an alarm 🔔 (desktop notification + sound).
+      </p>
+    </section>
+
+    <!-- Lists -->
+    <section class="lists">
+      <div class="list-card">
+        <h2><i class="fa-regular fa-hourglass-half"></i> Pending Tasks</h2>
+        <ul id="pendingList" class="tasks"></ul>
+      </div>
+
+      <div class="list-card">
+        <h2><i class="fa-regular fa-square-check"></i> Completed Tasks</h2>
+        <ul id="completedList" class="tasks"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

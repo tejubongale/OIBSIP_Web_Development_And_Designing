@@ -44,13 +44,11 @@ To design a responsive and elegant tribute page highlighting the achievements, c
 ---
 
 ## How to Run
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/your-username/OIBSIP_Web_Development_Task1.git
-2.Open the index.html file in any web browser.
+Open the index.html file in any web browser.
 
 Internship Info:
 Organization: Oasis Infobyte
 Domain: Web Development and Designing
 Task: Tribute Page
+
 Internship ID: OIBSIP

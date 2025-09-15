@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tejaswini Bongale - Portfolio</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Reset & base */
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif;}
+    body {line-height:1.6; color:#333; scroll-behavior: smooth;}
+    a {text-decoration:none; color:inherit;}
+    img {max-width:100%; display:block;}
+
+    /* Header & Navigation */
+    header {
+      position:fixed;
+      width:100%;
+      top:0;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      z-index:100;
+      display:flex;
+      justify-content:center;
+    }
+    header nav {
+      display:flex;
+      gap:25px;
+      padding:15px 0;
+    }
+    header nav a {
+      font-weight:500;
+      color:#333;
+      transition:0.3s;
+    }
+    header nav a:hover {color:#4CAF50;}
+
+    /* Hero */
+    .hero {
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 20px;
+      background:#f9f9f9;
+    }
+    .hero img {
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      margin-bottom:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+    .hero h1 {
+      font-family:'Poppins', sans-serif;
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+    .hero p {
+      font-size:1.2rem;
+      margin-bottom:25px;
+      color:#555;
+    }
+    .hero .btn {
+      padding:12px 30px;
+      border-radius:6px;
+      background:#4CAF50;
+      color:white;
+      font-weight:bold;
+      margin:5px;
+      transition:0.3s;
+    }
+    .hero .btn:hover {background:#45a049; transform:scale(1.05);}
+
+    /* Section Titles */
+    section {padding:100px 20px; max-width:1200px; margin:auto;}
+    .section-title {
+      text-align:center;
+      font-size:2.2rem;
+      color:#4CAF50;
+      margin-bottom:50px;
+      position:relative;
+    }
+    .section-title::after {
+      content:"";
+      display:block;
+      width:60px;
+      height:3px;
+      background:#4CAF50;
+      margin:10px auto 0;
+      border-radius:2px;
+    }
+    .project-card img {
+  width: 100%;       /* makes image fill the card width */
+  height: 200px;     /* fixed height for all images */
+  object-fit: cover; /* crops image nicely without stretching */
+  border-radius: 8px; /* optional: makes corners rounded */
+}
+
+
+    /* About */
+    #about {display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:30px;}
+    #about img {width:250px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+    #about .bio {max-width:600px;}
+    #about .bio p {margin-bottom:15px; color:#555;}
+    #about .skills {display:flex; flex-wrap:wrap; gap:10px;}
+    #about .skills span {
+      background:#e0f2f1;
+      color:#00796b;
+      padding:6px 15px;
+      border-radius:20px;
+      font-weight:500;
+      font-size:0.9rem;
+    }
+
+    /* Projects */
+    .projects {display:flex; flex-wrap:wrap; gap:25px; justify-content:center;}
+    .project-card {
+      background:white;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+      flex:1 1 300px;
+      transition:0.3s;
+    }
+    .project-card:hover {transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.1);}
+    .project-card img {border-radius:12px; margin-bottom:15px;}
+    .project-card h3 {color:#4CAF50; margin-bottom:10px;}
+    .project-card p {color:#555; margin-bottom:15px;}
+    .project-card a {padding:8px 18px; background:#4CAF50; color:white; border-radius:6px; font-weight:bold; transition:0.3s;}
+    .project-card a:hover {background:#45a049; transform:scale(1.05);}
+
+    /* Resume / Education / Experience */
+    .resume {display:flex; flex-wrap:wrap; gap:25px; justify-content:center;}
+    .resume-card {
+      flex:1 1 300px;
+      background:white;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+    .resume-card:hover {transform:translateY(-5px);}
+    .resume-card h3 {color:#4CAF50; margin-bottom:10px;}
+    .resume-card p {color:#555; margin-bottom:5px;}
+    .resume-card span {font-weight:bold;}
+
+    /* Contact */
+    #contact {background:#f1f8f7; padding:80px 20px;}
+    #contact form {
+      max-width:600px;
+      margin:30px auto 0;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+    #contact input, #contact textarea {
+      padding:12px;
+      border-radius:6px;
+      border:1px solid #ccc;
+      font-size:1rem;
+    }
+    #contact button {
+      padding:12px;
+      border:none;
+      border-radius:6px;
+      background:#4CAF50;
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    #contact button:hover {background:#45a049;}
+
+    #contact .social {text-align:center; margin-top:30px;}
+    #contact .social a {
+      margin:0 15px;
+      font-size:1.8rem;
+      color:#4CAF50;
+      transition:0.3s;
+    }
+    #contact .social a:hover {transform:scale(1.2);}
+
+    /* Footer */
+    footer {text-align:center; padding:25px 20px; background:#222; color:#ddd;}
+    footer a {color:#4CAF50;}
+    footer a:hover {text-decoration:underline;}
+
+    /* Responsive */
+    @media(max-width:768px){
+      #about {flex-direction:column;}
+      .hero h1 {font-size:2.5rem;}
+      .projects, .resume {flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCVk34DPmi_H0yY1SBbd61RJi4WfegVpcwGA&s" alt="Bindu Gowda">
+    <h1>Bindu Gowda</h1>
+    <p>Computer Science & Engineering | Aspiring VLSI & Full-Stack Developer</p>
+    <div>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCVk34DPmi_H0yY1SBbd61RJi4WfegVpcwGA&s" alt="Bindu">
+    <div class="bio">
+      <p>Hello! I’m Bindu, a passionate CSE student and aspiring VLSI & Full-Stack developer. I enjoy building web apps, exploring AI & ML, and creating user-friendly digital solutions.</p>
+      <p>Skills I bring to the table:</p>
+      <div class="skills">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>VLSI</span><span>Machine Learning</span><span>React</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/121/351/datas/medium.png" alt="Project 1">
+        <h3>Disease Prediction Web App</h3>
+        <p>AI & ML-based web app that predicts diseases based on symptoms, with PDF report downloads and multilingual support.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/2c1322176362479.Y3JvcCwxMTc0LDkxOCwwLDA.png" alt="Project 2">
+        <h3>Real-Time Chat App</h3>
+        <p>Full-stack chat application using React, Node.js, Socket.io & MongoDB with authentication and chat history.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="data:image/jpeg;base64,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" alt="Project 3">
+        <h3>EV Wireless Charging Station</h3>
+        <p>Arduino-based wireless EV charger prototype demonstrating smart charging technology for electric vehicles.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume / Education / Experience -->
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="resume">
+      <div class="resume-card">
+        <h3>Education</h3>
+        <p><span>B.Tech:</span> Computer Science & Engineering</p>
+        <p><span>University:</span> Presidency University, Bangalore</p>
+        <p><span>Expected:</span> July 2026</p>
+      </div>
+      <div class="resume-card">
+        <h3>Experience</h3>
+        <p><span>Internship:</span> Shadow Fox - Java Development</p>
+        <p><span>Projects:</span> Disease Prediction Web App, Real-Time Chat App</p>
+      </div>
+      <div class="resume-card">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, React, Python, VLSI, ML, Node.js</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Tejaswini Bongale. All rights reserved. | <a href="#hero">Back to Top</a>
+  </footer>
+
+</body>
+</html>

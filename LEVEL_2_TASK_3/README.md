@@ -51,14 +51,12 @@ To build a **Task Management Application** that allows users to add, edit, compl
 ---
 
 ## How to Run
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/your-username/OIBSIP_Web_Development_Task3.git
-2.Open the index.html file in any browser.
-3.Allow notification permissions when prompted.
+1.Open the index.html file in any browser.
+2.Allow notification permissions when prompted.
 
 Internship Info:
 Organization: Oasis Infobyte
 Domain: Web Development and Designing
 Task: To-Do App with Reminders
+
 Internship ID: OIBSIP
